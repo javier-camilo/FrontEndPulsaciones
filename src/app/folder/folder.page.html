@@ -6,13 +6,13 @@
     <ion-title>REGISTRAR PERSONAS</ion-title>
   </ion-toolbar>
 </ion-header>
-<br>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding" >
 
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-         
+   
+  <div style="margin-top: 25px;">
+
+ 
             <form #formulario="ngForm">
                                            
                 <div class="form-group">
@@ -55,12 +55,15 @@
                 </div>
             
             </form>
-        </div>
-    </div>
+
     <ion-card style="margin-top: 20px; margin-bottom: 20px;">
 
-      <ion-card-header>
-        <ion-card-subtitle>Registra tu pulsacion</ion-card-subtitle>
+      <ion-card-header *ngIf="persona!=null">
+        <ion-card-subtitle>Registra tu pulsacion: {{persona.pulsacion}}</ion-card-subtitle>
       </ion-card-header>
+
     </ion-card>
+
+  </div>
+
 </ion-content>

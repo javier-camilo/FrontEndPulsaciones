@@ -30,7 +30,7 @@ export class FolderPage implements OnInit {
  
   add(formulario: NgForm){
     
-    this.personaService.createTask(this.persona).subscribe();
+    this.personaService.createTask(this.persona).subscribe(result => this.persona= result);
     
     
     this.clear(formulario);

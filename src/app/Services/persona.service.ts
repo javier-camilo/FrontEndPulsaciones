@@ -39,7 +39,7 @@ export class PersonaService {
 
   createTask(task: Task) {
     const path = this.url+"api/Pulsaciones";
-    return this.http.post(path, task);
+    return this.http.post<Persona>(path, task);
   }
 
   updateTask(persona: Persona) {
