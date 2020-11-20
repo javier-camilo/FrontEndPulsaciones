@@ -1,0 +1,7 @@
+{
+    "/apidemo/*": {
+      "target": "https://pulsacionapi.azurewebsites.net",
+      "secure": false,
+      "logLevel": "debug"
+    }
+}

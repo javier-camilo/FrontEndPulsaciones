@@ -1,0 +1,7 @@
+{
+  "name": "PulsacionFrontEnd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

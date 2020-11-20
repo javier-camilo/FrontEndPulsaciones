@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CONSULTAR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card style="margin-top: 40px; margin-bottom: 20px;">
+
+    <ion-card-header>
+      <ion-card-subtitle>Por cada persona que uso la app</ion-card-subtitle>
+      <ion-card-title>Pulsaciones Registradas</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-list *ngFor="let persona of listadoPersona">
+    <button class="boton_personalizado"  routerLink='/modificar/{{persona.identificacion}}'icon-start>
+      <ion-icon [name]="'Nombre:-' + persona.nombre" item-start>      </ion-icon>
+      <p> Nombre: {{ persona.nombre }} | Edad {{ persona.edad }} | Pulsacion: {{ persona.pulsacion }} </p>
+      
+    </button>
+  </ion-list>
+
+  
+    <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Cargando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+</ion-content>
