@@ -10,9 +10,9 @@
 <ion-content [fullscreen]="true" class="ion-padding" >
 
    
-  <div style="margin-top: 25px;">
-
- 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
             <form #formulario="ngForm">
                                            
                 <div class="form-group">
@@ -59,11 +59,16 @@
     <ion-card style="margin-top: 20px; margin-bottom: 20px;">
 
       <ion-card-header *ngIf="persona!=null">
-        <ion-card-subtitle>Registra tu pulsacion: {{persona.pulsacion}}</ion-card-subtitle>
+        <ion-card-subtitle>tu pulsacion: {{persona.pulsacion}}</ion-card-subtitle>
       </ion-card-header>
 
     </ion-card>
+  
+    </ion-col>
+    
+  </ion-row>
 
-  </div>
+</ion-grid>
+
 
 </ion-content>
